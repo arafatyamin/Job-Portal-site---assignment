@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
 import Home from "../pages/Home";
 import SignIn from "../pages/SignIn";
-import SignOut from "../pages/SignOut";
+import SignUp from "../pages/SignUp";
 import Companies from "../pages/TopJobCategories/Companies";
 import Experiences from "../pages/TopJobCategories/Experiences";
 import Fresher from "../pages/TopJobCategories/Fresher";
@@ -34,8 +34,8 @@ export const router = createBrowserRouter([
                element: <SignIn></SignIn> 
             },
             {
-               path: "/signOut",
-               element: <SignOut></SignOut> 
+               path: "/signUp",
+               element: <SignUp></SignUp> 
             }
         ]
     }
