@@ -1,42 +1,50 @@
 [
   {
+    "id": 1,
     "position_name": "Graphic Designer",
-    "company_name": "gigl summaries ltd",
+    "company_name": "walton pvt ltd",
     "job_location": "bangladesh"
   },
   {
+    "id": 2,
     "position_name": "Graphic Designer",
-    "company_name": "gigl summaries ltd",
+    "company_name": "alibaba pvt ltd",
     "job_location": "bangladesh"
   },
   {
+    "id": 3,
     "position_name": "Graphic Designer",
-    "company_name": "gigl summaries ltd",
+    "company_name": "orion gas pvt ltd",
     "job_location": "bangladesh"
   },
   {
+    "id": 4,
     "position_name": "Graphic Designer",
-    "company_name": "gigl summaries ltd",
+    "company_name": "airtel pvt ltd",
     "job_location": "bangladesh"
   },
   {
+    "id": 5,
     "position_name": "Graphic Designer",
-    "company_name": "gigl summaries ltd",
+    "company_name": "robi ptv ltd",
     "job_location": "bangladesh"
   },
   {
+    "id": 6,
     "position_name": "Graphic Designer",
-    "company_name": "gigl summaries ltd",
+    "company_name": "boshundhara pvt ltd",
     "job_location": "bangladesh"
   },
   {
+    "id": 7,
     "position_name": "Graphic Designer",
-    "company_name": "gigl summaries ltd",
+    "company_name": "fresh pvt ltd",
     "job_location": "bangladesh"
   },
   {
+    "id": 8,
     "position_name": "Graphic Designer",
-    "company_name": "gigl summaries ltd",
+    "company_name": "glob pvt ltd",
     "job_location": "bangladesh"
   }
 ]
