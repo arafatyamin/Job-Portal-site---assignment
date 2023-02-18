@@ -7,7 +7,6 @@ const Experiences = () => {
         .then(res => res.json())
         .then(data => setData(data))
     },[])
-    console.log(data)
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mx-8'>
             {

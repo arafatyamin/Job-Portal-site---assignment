@@ -1,9 +1,10 @@
 import React from 'react';
+import JobCategories from '../components/JobCategories';
 
 const Job = () => {
     return (
         <div>
-            <h1>search result</h1>
+            <JobCategories></JobCategories>
         </div>
     );
 };

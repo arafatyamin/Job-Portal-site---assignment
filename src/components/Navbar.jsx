@@ -1,17 +1,16 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
-import  './navbar.css';
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext)
 
     const navLinks = <>
          <li className='hover:underline'><Link to="/">Home</Link></li>
-         <li className='hover:underline'><Link to="/">Job</Link></li>
-         <li className='hover:underline'><Link>About</Link></li>
-         <li className='hover:underline'><Link>Contact Us</Link></li>
-         <li className='block uppercase mx-auto shadow bg-indigo-700 hover:bg-white hover:text-black hover:border-indigo-700 hover:border-2 focus:shadow-outline focus:outline-none text-white text-xs h-full rounded-xl'><Link to='/signIn'>Post Job</Link></li>
+         <li className='hover:underline'><Link to="/job">Job</Link></li>
+         <li className='hover:underline'><Link to="/about">About</Link></li>
+         <li className='hover:underline'><Link to="/contact">Contact Us</Link></li>
+         <li className='block uppercase mx-auto shadow bg-indigo-700 hover:bg-white hover:text-black hover:border-indigo-700 hover:border-2 focus:shadow-outline focus:outline-none text-white text-xs h-full rounded-xl mr-2'><Link to='/signIn'>Post Job</Link></li>
          {
           user?.uid ?  
           <li onClick={()=>logOut()} className='block uppercase mx-auto shadow bg-indigo-700 hover:bg-white hover:text-black hover:border-indigo-700 hover:border-2 focus:shadow-outline focus:outline-none text-white text-xs h-full rounded-xl'><Link to=''>Sign Out</Link></li> : <li className='block uppercase mx-auto shadow bg-indigo-700 hover:bg-white hover:text-black hover:border-indigo-700 hover:border-2 focus:shadow-outline focus:outline-none text-white text-xs h-full rounded-xl'><Link to='/signIn'>Sign In</Link></li>
