@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
 
 const SignUp = () => {
-  const {createUser} = useContext(AuthContext)
+  const {createUser, updateUser} = useContext(AuthContext)
+  const [registerError, setRegisterError] = useState('')
 
   const handleRegister =(e)=> {
     e.preventDefault();
+    setRegisterError('')
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
@@ -14,8 +16,18 @@ const SignUp = () => {
     .then(result => {
       const user = result.user;
       console.log(user)
+      alert('user created successfully')
+      const userInfo = {
+        displayName: name
+      }
+      updateUser(userInfo)
+      .then(()=>{})
+      .catch(err => console.log(err))
     })
-    .catch(err => console.log(err))
+    .catch(error => {
+      console.log(error)
+      setRegisterError(error.message)
+    })
     
 
   }
@@ -34,7 +46,7 @@ const SignUp = () => {
         type="text"
         name="name"
         placeholder="full name"
-        className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+        className="w-full text-black border-none bg-transparent outline-none placeholder:italic focus:outline-none"
       />
     </div>
     <div
@@ -44,7 +56,7 @@ const SignUp = () => {
         type="email"
         name="email"
         placeholder="Email or Username"
-        className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+        className="w-full text-black border-none bg-transparent outline-none placeholder:italic focus:outline-none"
       />
     </div>
 
@@ -55,15 +67,18 @@ const SignUp = () => {
         type="password"
         name='password'
         placeholder="Password"
-        className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+        className="w-full text-black border-none bg-transparent outline-none placeholder:italic focus:outline-none"
       />
     </div>
 
     <button
-      className="transform rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-indigo-400"
+      className="w-full transform rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-indigo-400"
     >
       SIGN UP
     </button>
+    {
+      registerError && <p className='text-red-900 text-xl text-center'>{registerError.split('/')[1].split(')')[0]}</p>
+    }
     </form>
 
     <Link to="" className="transform text-center font-semibold text-gray-500 duration-300 hover:text-gray-300"

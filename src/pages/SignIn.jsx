@@ -54,7 +54,7 @@ const SignIn = () => {
       />
     </div>
     {
-      loginError && <p classNameName='text-red-900 text-xl text-center'>{loginError.split('/')[1].split(')')[0]}</p>
+      loginError && <p className='text-red-900 text-xl text-center'>{loginError.split('/')[1].split(')')[0]}</p>
     }
 
     <button
